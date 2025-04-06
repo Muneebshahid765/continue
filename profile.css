@@ -1,0 +1,221 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        section {
+            min-height: 100vh;
+            width: 100%;
+            background: linear-gradient(133deg, #a6a5f8, #abcfe2, #f8f8f6, #c0b3b7, #3a3738);
+            display: flex;
+            padding: 2rem 5%;
+            position: relative;
+        }
+
+        .space {
+            display: flex;
+           
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            gap: 2rem;
+        }
+
+        .left {
+            width: 100%;
+            max-width: 600px;
+            order: 1;
+            text-align: center;
+        }
+
+        .right {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            order: 2;
+            display: flex;
+            justify-content: center;
+        }
+
+        .right img {
+            width: 100%;
+            height: auto;
+            max-height: 50vh;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+        }
+
+        .heading {
+            margin: 0 auto 1.5rem;
+            font-size: 0.9rem;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            width: fit-content;
+            padding: 0.4rem 1.2rem;
+            border-radius: 2rem;
+            text-align: center;
+            letter-spacing: 0.05rem;
+            font-style: italic;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            font-weight: 570;
+            color: rgb(50, 12, 139);
+            line-height: 1.2;
+            font-style: oblique;
+        }
+
+        .web {
+            font-style: oblique;
+            display: inline-block;
+            color: rgb(32, 5, 94);
+            font-size: 2.5rem;
+            text-decoration: underline;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+            justify-content: center;
+        }
+
+        .tech-stack img {
+            border-radius: 12px;
+            height: 30px;
+            width: auto;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .tech-stack img:hover {
+            transform: translateY(-3px) scale(1.1);
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+        }
+
+        .order-btn {
+            display: inline-block;
+            background: linear-gradient(to right, #2c3e50, #4a6491);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            border: none;
+            margin-top: 1rem;
+            box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            width: fit-content;
+            font-style: italic;
+        }
+
+        .order-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
+            background: linear-gradient(to right, #4a6491, #2c3e50);
+        }
+
+        /* Tablet Landscape */
+        @media (min-width: 768px) {
+            .space {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 2rem;
+            }
+            
+            .left {
+                text-align: left;
+            }
+            
+            .right img {
+                max-height: 90vh;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .web {
+                font-size: 3rem;
+            }
+            
+            .heading {
+                margin-left: 1rem;
+                margin-right: 0;
+            }
+            
+            .tech-stack {
+                justify-content: flex-start;
+            }
+            
+            .order-btn {
+                margin-left: 1rem;
+            }
+        }
+
+        /* Desktop */
+        @media (min-width: 1025px) {
+            section {
+                padding: 0 10%;
+            }
+            
+            .right {
+                max-width: 35vw;
+            }
+            
+            .right img {
+                max-height: 90vh;
+            }
+            
+            h1 {
+                font-size: 3rem;
+            }
+            
+            .web {
+                font-size: 4.5rem;
+            }
+        }
+
+        /* Special cases for very small screens */
+        @media (max-width: 450px) {
+            h1 {
+                font-size: 1rem;
+            }
+            
+            .web {
+                font-size: 1.3rem;
+            }
+            .right img {
+                max-height: 70vh;
+            }
+            
+            .tech-stack img {
+                height: 17px;
+            }
+            .heading {
+            
+                font-size: 0.5rem;
+                padding: 0.5rem 1rem;
+                border-radius: 1.5rem;
+            }
+            
+            .order-btn {
+                padding: 0.4rem 1rem;
+                font-size: 0.5rem;
+            }
+        }
