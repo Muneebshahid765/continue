@@ -1,0 +1,208 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        :root {
+            color-scheme: light only;
+          }
+          
+          /* Update your body and section styles */
+          body {
+            overflow-x: hidden;
+            min-height: 100vh;
+            background-color: #ffffff; /* Explicit light background */
+            color: #000000; /* Explicit dark text */
+          }
+
+          section {
+            min-height: 100vh;
+            width: 100%;
+            background: linear-gradient(133deg, #a6a5f8, #abcfe2, #f8f8f6, #c0b3b7, #3a3738) !important;
+            display: flex;
+            padding: 2rem 5%;
+            position: relative;
+            color: inherit; /* Inherits from body */
+            animation: gradientBG 15s ease infinite;
+          }
+          
+          @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        .space {
+            display: flex;
+           
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            gap: 2rem;
+        }
+
+        .left {
+            width: 100%;
+            max-width: 600px;
+            order: 1;
+            text-align: center;
+        }
+
+        .right {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            order: 2;
+            display: flex;
+            justify-content: center;
+        }
+
+        .right img {
+            width: 100%;
+            height: auto;
+            max-height: 85vh;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+        }
+        .right:hover {
+            transform: scale(1.05);
+        }
+
+      
+        .right img:hover {
+            transform: translateY(-10px);
+            filter: drop-shadow(0 15px 30px rgba(0,0,0,0.4));
+        }
+        .heading {
+            margin: 0 auto 1.5rem;
+            font-size: 0.9rem;
+            background-color: rgba(0, 0, 0, 0.8) !important;
+            color: white !important;
+            width: fit-content;
+            padding: 0.4rem 1.2rem;
+            border-radius: 2rem;
+            text-align: center;
+            letter-spacing: 0.05rem;
+            font-style: italic;
+            animation: pulse 4s ease infinite;
+          }
+          .heading:hover {
+            transform: scale(1.05);
+            background-color: rgba(0, 0, 0, 0.9);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+          h1 {
+            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            font-weight: 570;
+            color: rgb(50, 12, 139) !important; 
+            line-height: 1.2;
+            font-style: oblique;
+          }
+          h1:hover {
+            text-shadow: 2px 2px 8px rgba(50, 12, 139, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .web {
+            font-style: oblique;
+            display: inline-block;
+            color: rgb(32, 5, 94) !important;
+            font-size: 4.5rem;
+            text-decoration: underline;
+          }
+          .web:hover {
+            color: rgb(70, 22, 180);
+            transform: scale(1.05) rotate(-2deg);
+            text-shadow: 3px 3px 10px rgba(32, 5, 94, 0.3);
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+            justify-content: center;
+        }
+
+        .tech-stack img {
+            border-radius: 12px;
+            height: 30px;
+            width: auto;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .tech-stack img:hover {
+            transform: translateY(-5px) scale(1.15) rotateY(15deg);
+            filter: drop-shadow(0 8px 15px rgba(0,0,0,0.2));
+        }
+
+        .order-btn {
+            display: inline-block;
+            background: linear-gradient(to right, #2c3e50, #4a6491);
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            border: none;
+            margin-top: 1rem;
+            box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            width: fit-content;
+            font-style: italic;
+        }
+        .order-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .order-btn:hover::before {
+            left: 100%;
+        }
+        .order-btn a {
+            color: white;
+            text-decoration: none;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        
+        }
+      
